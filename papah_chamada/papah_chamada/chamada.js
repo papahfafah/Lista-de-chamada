@@ -1,74 +1,54 @@
-const numero = [
-    1,
-    2,
-    3,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24,
-    27,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33,
-    34,
-]
+const numeros = [
+    { numero: 1 }, { numero: 2 }, { numero: 3 }, { numero: 4 }, { numero: 5 },
+    { numero: 6 }, { numero: 7 }, { numero: 8 }, { numero: 9 }, { numero: 10 },
+    { numero: 11 }, { numero: 12 }, { numero: 13 }, { numero: 14 }, { numero: 15 },
+    { numero: 16 }, { numero: 17 }, { numero: 18 }, { numero: 19 }, { numero: 21 },
+    { numero: 22 }, { numero: 23 }, { numero: 24 }, { numero: 26 },{ numero: 27 }, { numero: 28 },
+    { numero: 29 }, { numero: 30 }, { numero: 31 }, { numero: 32 }, { numero: 33 },
+    
+];
+
+const listaDeChamada = [
+    { nome: "ANA CAROLINA PONTAROLO CARVALHO" },
+    { nome: "ANA HELOISE MONTERO DA SILVA" },
+    { nome: "ANA LUIZA DA SILVA NOGUEIRA" },
+    { nome: "ANDRE CARDIN SOARES" },
+    { nome: "BEATRIZ BRANDT VIANA" },
+    { nome: "BHIANCA MULDENBERGER PINTO" },
+    { nome: "CAUAN JUN KESHINO" },
+    { nome: "ELIA GABRIEL VIERA" },
+    { nome: "ENZO SAMUEL LISBOA ZORDENUNES" },
+    { nome: "GIOVANNA CALDEIRA" },
+    { nome: "HENRIQUE DUARTE DOS SANTOS" },
+    { nome: "HENRIQUE EMILIO SILVA KRUGER" },
+    { nome: "IAGO DANIEL CALIXTO" },
+    { nome: "IASMIN APARECIDA DA SILVA PEREIRA" },
+    { nome: "ISADORA CRISTINA SILVEIRA" },
+    { nome: "JHENYFER GUIMARÃES DE LARA" },
+    { nome: "JOAO FRANCISCO KUJIV" },
+    { nome: "JOÃO HENRIQUE MORAIS DE ASSIS" },
+    { nome: "LORENZO HENRIQUE BENIN" },
+    { nome: "LUIZ FELIPE DO ROSARIO DE PAULA" },
+    { nome: "LUIZ GUSTAVO BRASIL" },
+    { nome: "MARIA JULIA AMORIM DA SEVA" },
+    { nome: "MARIA LUYZA MENDES DA SILVA LEAL" },
+    { nome: "ADALBERTO RAFAEL DA SILVA AMARAL" },
+    { nome: "PEDRO HENRIQUE LOPES DE LARA" },
+    { nome: "RENATO GABRIEL VIANA STRAUBE" },
+    { nome: "RICHARD CARRARO" },
+    { nome: "VICTOR DE PAULA" },
+    { nome: "VINICIUS BORTOLI" },
+    { nome: "WILLIAN NOVAES BITTENCOURT" },
+    { nome: "THAISSA COSTA ALVES" },
+    
+];
 
 
-const nomeAlunos = [
-    "ANA CAROLINA PONTAROLO CARVALHO",
-    "ANA HELOISE MONTERO DA SILVA" ,
-    "ANA LUIZA DA SILVA NOGUEIRA" ,
-    "ANDRE CARDIN SOARES" ,
-    "BEATRIZ BRANDT VIANA" ,
-    "BHIANCA MULDENBERGER PINTO" ,
-    "CAUAN JUN KESHINO" ,
-    "ELIA GABRIEL VIERA" ,
-    "ENZO SAMUEL LISBOA ZORDENUNES" ,
-    "GIOVANNA CALDEIRA" ,
-    "HENRIQUE DUARTE DOS SANTOS" ,
-    "HENRIQUE EMILIO SILVA KRUGER" ,
-    "IAGO DANIEL CALIXTO" ,
-    "IASMIN APARECIDA DA SILVA PEREIRA" ,
-    "ISADORA CRISTINA SILVEIRA" ,
-    "JHENYFER GUIMARÃES DE LARA" ,
-    "JOAO FRANCISCO KUJIV" ,
-    "JOÃO HENRIQUE MORAIS DE ASSIS" ,
-    "LORENZO HENRIQUE BENIN" ,
-    "LUIZ FELIPE DO ROSARIO DE PAULA" ,
-    "LUIZ GUSTAVO BRASIL" ,
-    "MARIA JULIA AMORIM DA SEVA" ,
-    "MARIA LUYZA MENDES DA SILVA LEAL" ,
-    "PEDRO HENRIQUE LOPE DE LARA",
-    "GABRIEL VIANA" ,
-    "RICHARD CARRARO" ,
-    "VICTOR DE PAULA" ,
-    "VINICIUS BORTOLI" ,
-    "WILLIAN NOVAES BITTENCOURT" ,
-    "THAISSA COSTA ALVES" ,
-    "ADALBERTO RAFAEL DA SILVA AMARAL"
-]
-
-const novaListaDeChamada = listaDeChamada.filter(aluno => aluno.nome !== "ADALBERTO RAFAEL DA SILVA AMARAL");
-novaListaDeChamada.push({ numero: 26, nome: "PAOLA RAFALA DOS SANTOS AMARAL" });
-
+const novaListaDeChamada = listaDeChamada.map((aluno, index) => {
+    if (aluno.nome === "ADALBERTO RAFAEL DA SILVA AMARAL") {
+        return { nome: "PAOLA RAFAELA DOS SANTOS AMARAL", numero: numeros[index].numero };
+    }
+    return { ...aluno, numero: numeros[index].numero };
+});
 
 console.log(novaListaDeChamada);
