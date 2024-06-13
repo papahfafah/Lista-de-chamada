@@ -30,7 +30,7 @@ const listaDeChamada = [
     { nome: "LORENZO HENRIQUE BENIN" },
     { nome: "LUIZ FELIPE DO ROSARIO DE PAULA" },
     { nome: "LUIZ GUSTAVO BRASIL" },
-    { nome: "MARIA JULIA AMORIM DA SEVA" },
+    { nome: "MARIA JULIA AMORIM DA SILVA" },
     { nome: "MARIA LUYZA MENDES DA SILVA LEAL" },
     { nome: "ADALBERTO RAFAEL DA SILVA AMARAL" },
     { nome: "PEDRO HENRIQUE LOPES DE LARA" },
